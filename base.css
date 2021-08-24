@@ -61,6 +61,7 @@ a{
     list-style: none;
     /* border: 2px solid brown; */
     margin: 0;
+    padding: 0;
     /* margin-right: 0.5em; */
     text-transform: capitalize;
 }
@@ -74,6 +75,7 @@ a{
     border-radius: 10px;
     /* background-color: #fca311; */
 }
+
 
 
 /* -----------ham and shop-------- */
@@ -118,7 +120,7 @@ a{
         flex-direction: column;
         margin-top: 1em;
         display: none;
-        margin-left: 2em;
+        margin-left: 0em;
         width: fit-content;
     }
 
@@ -127,7 +129,7 @@ a{
         /* display: block; */
     }
 
-    .respo-gen a{
+    .name-and-logo{
         margin-left: 0em;
     }
 
@@ -135,11 +137,26 @@ a{
 
 
 /* ------hover area------- */
-
+.genres a:visited{
+    color: white;
+}
 .genres a:hover{
     color: orange;
 }
 
+.genres a:active{
+    color: white;
+}
+
+
 i:hover{
     color: orange;
+}
+
+i:focus{
+    color: white;
+}
+
+i:active{
+    color: white;
 }
