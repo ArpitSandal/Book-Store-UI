@@ -11,12 +11,12 @@ a{
 /* --------navbar area-------- */
 
 .navbar{
-    background-color: #14213d;
+    background-color: whitesmoke;
     display: flex;
     /* border: 2px solid yellow; */
     justify-content: space-between;
     padding: 1em;
-    color: white;
+    color: gray;
     position: fixed;
     top: 0;
     width: 100%;
@@ -69,16 +69,21 @@ a{
 .genres a{
     margin-left: 1em;
     font-size: 1.1rem;
-    color: white;
+    /* color: gray; */
     /* border: 2px solid white; */
     padding: 0.5em;
     border-radius: 10px;
     /* background-color: #fca311; */
 }
 
+.genres a li{
+    color: gray;
+}
+
 
 
 /* -----------ham and shop-------- */
+
 .ham-and-shop{
     /* border: 2px solid red; */
     display: flex;
@@ -88,7 +93,7 @@ a{
 }
 
 .ham-and-shop i{
-    color: white;
+    color: gray;
 }
 .shop{
     margin: 0 1em 0 1em;
@@ -98,10 +103,94 @@ a{
     display: none;
 }
 
+/* ---------popular----------- */
+
+.popular-heading{
+    margin-top: 110px;
+    margin-left: 1em;
+    text-transform: uppercase;
+    color: gray;
+    /* margin-top: 1em; */
+}
+
+.popular{
+    margin-top: 1em;
+    height: 350px;
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    /* background-color: bisque; */
+}
+.popular::-webkit-scrollbar {
+    display: none;
+  }
+
+
+
+.books{
+    width: 33em;
+    background-color: #f06969d8;
+    height: 250px;
+    display: flex;
+    color: white;
+    margin: 0.2em;
+}
+
+.description{
+    margin-top: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.description h4{
+    text-transform: capitalize;
+}
+
+.description-container{
+    /* padding: 1em; */
+    overflow: hidden;
+    height: 100px;
+    width: 15em;
+    text-overflow: ellipsis;
+}
+
+p{
+    margin-top: 0.3em;
+}
+
+.buy-this{
+    /* margin-top: 2em; */
+    background-color: white;
+    border-radius: 20px;
+    padding: 0.4em 0.6em 0.4em 0.6em;
+    display: inline-block;
+
+}
+.buy-this p{
+    margin: 0;
+    color: #f06969d8;
+}
+
+
+h4{
+    margin: 0;
+    padding: 0;
+}
+
+.popular img{
+    width: 11em;
+    height: 270px;
+    margin-top: 2em;
+    margin-left: 1.5em;
+    box-shadow: 3px 3px 22px rgb(31, 30, 30);
+}
 
 /* --------media-queries--------- */
 
-/*-------for displaying genres resposively*/
+
+/*-------for displaying genres resposively--------*/
 @media(max-width: 1000px){
     .ham{
         display: block;
@@ -136,27 +225,29 @@ a{
 }
 
 
+@media(max-width: 600px){
+    .popular{
+        flex-direction: column;
+        overflow-y: scroll;
+    }
+
+    .books{
+        width: 100%;
+        margin-bottom: 5em;
+    }
+
+    .popular img{
+        height: 250px;
+    }
+}
+
+
 /* ------hover area------- */
-.genres a:visited{
-    color: white;
-}
-.genres a:hover{
-    color: orange;
+
+.genres a li:hover{
+    color: black;
 }
 
-.genres a:active{
-    color: white;
-}
-
-
-i:hover{
-    color: orange;
-}
-
-i:focus{
-    color: white;
-}
-
-i:active{
-    color: white;
+.ham-and-shop i:hover{
+    color: black;
 }
