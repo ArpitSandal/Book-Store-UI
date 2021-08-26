@@ -8,6 +8,11 @@ a{
     text-decoration: none;
 }
 
+h4{
+    margin: 0;
+    padding: 0;
+}
+
 /* --------navbar area-------- */
 
 .navbar{
@@ -21,7 +26,6 @@ a{
     top: 0;
     width: 100%;
     transition: .5s;
-    /* height: 50px; */
 }
 
 .name-logo-and-genre{
@@ -56,6 +60,7 @@ a{
 }
 
 /* ------------generes--------- */
+
 .genres{
     display: flex;
     list-style: none;
@@ -127,10 +132,10 @@ a{
     display: none;
   }
 
-
+/* -----books covers and tiles-------- */
 
 .books{
-    width: 33em;
+    width: 35em;
     background-color: #f06969d8;
     height: 250px;
     display: flex;
@@ -151,12 +156,12 @@ a{
 .description-container{
     /* padding: 1em; */
     overflow: hidden;
-    height: 99px;
+    /* height: 99px; */
     width: 15em;
-    text-overflow: ellipsis;
+    line-break: auto;
 }
 
-p{
+.description p{
     margin-top: 0.3em;
 }
 
@@ -173,12 +178,6 @@ p{
     color: #f06969d8;
 }
 
-
-h4{
-    margin: 0;
-    padding: 0;
-}
-
 .popular img{
     width: 11em;
     height: 270px;
@@ -187,10 +186,70 @@ h4{
     box-shadow: 3px 3px 22px rgb(31, 30, 30);
 }
 
+
+/* ----------All genres------------- */
+
+.allgenres-heading h2{
+    margin-left: 1em;
+    color: gray;
+    text-transform: uppercase;
+    margin-top: 2em;
+}
+
+.allgenres{
+    /* height: 250px; */
+    display: flex;
+    justify-content: space-around;
+}
+
+.area1{
+    width: 47%;
+    /* border: 2px solid red; */
+    display: flex;
+    padding: 1em;
+    justify-content: space-between;
+
+}
+
+.smallbook{
+    width: 49%;
+    /* border: 2px solid black; */
+    height: 220px;
+    display: flex;
+    box-shadow: 2px 2px 10px rgb(109, 107, 107);
+
+}
+
+.smallbook img{
+    height: 100%;
+    width: 150px;
+}
+
+
+.smalldescription h4{
+    margin-top: 1em;
+    margin-left: 1em;
+    color: rgb(51, 49, 49);
+    text-transform: capitalize;
+}
+
+.smalldescription p{
+    margin-top: 0.5em;
+    margin-left: 1em;
+    color: gray;
+}
+
+.stars{
+    display: flex;
+    margin: 1em;
+    color: rgb(255, 196, 0);
+}
+
 /* --------media-queries--------- */
 
 
 /*-------for displaying genres resposively--------*/
+
 @media(max-width: 1000px){
     .ham{
         display: block;
@@ -206,7 +265,6 @@ h4{
     }
 
     .genres{
-        flex-direction: column;
         margin-top: 1em;
         display: none;
         margin-left: 0em;
@@ -215,6 +273,7 @@ h4{
 
     .respo-gen{
         display: flex;
+        flex-direction: column;
         /* display: block; */
     }
 
@@ -224,34 +283,69 @@ h4{
 
 }
 
+/* --------for books tiles--------- */
 
 @media(max-width: 600px){
     .popular{
         flex-direction: column;
         overflow-y: scroll;
+        height: 500px;
     }
 
     .books{
         width: 100%;
         margin: 0;
         margin-bottom: 4em;
+        height: 300px;
     }
 
     .popular img{
-        height: 250px;
+        height: 200px;
+        margin-top: 1em;
+        transition: 0.5s;
     }
 
     .description-container{
         width: 100%;
-        /* height: 70px; */
-        text-overflow: ellipsis;
+        height: 65px;
     }
 
 }
 
 @media(max-width: 400px){
     .buy-this{
-        margin-top: 1em;
+        margin-top: 0.5em;
+    }
+
+}
+
+
+/* ----------for small books--------- */
+
+@media(max-width: 1200px){
+    .area1{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .smallbook{
+        width: 100%;
+        margin-bottom: 2em;
+    }
+
+}
+
+@media(max-width: 600px){
+    .allgenres{
+        flex-direction: column;
+    }
+
+    .area1{
+        padding: 0;
+    }
+    .smallbook{
+        width: 90%;
+        margin-left: 1em;
     }
 }
 
@@ -264,4 +358,8 @@ h4{
 
 .ham-and-shop i:hover{
     color: black;
+}
+
+.buy-this p:hover{
+    font-weight: bold;
 }

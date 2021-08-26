@@ -2,11 +2,11 @@ function genre_respo() {
 
     // making nav responsive
     let ham = document.getElementById("navid");
-    if (ham.className == "name-logo-and-genre") {
+    if (ham.className == "navbar") {
         ham.className += " responsive";
     }
     else {
-        ham.className = "name-logo-and-genre";
+        ham.className = "navbar";
     }
 
     let elm = document.getElementById("genreid");
