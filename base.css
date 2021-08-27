@@ -13,6 +13,11 @@ h4{
     padding: 0;
 }
 
+::placeholder{
+    color: #7676a1bd;
+    font-size: 0.9rem;
+}
+
 /* --------navbar area-------- */
 
 .navbar{
@@ -216,7 +221,7 @@ h4{
     /* border: 2px solid black; */
     height: 220px;
     display: flex;
-    box-shadow: 2px 2px 10px rgb(109, 107, 107);
+    box-shadow: 2px 2px 20px rgb(141, 139, 139);
 
 }
 
@@ -244,6 +249,131 @@ h4{
     margin: 1em;
     color: rgb(255, 196, 0);
 }
+
+
+/* ---------footer-area--------- */
+
+.foot{
+    border: 2px solid;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3em;
+    background-color: #22223b;
+}
+
+.messagearea{
+    width: 48%;
+    /* border: 2px solid ; */
+}
+
+.email{
+    /* border: 2px solid; */
+    display: flex;
+    justify-content: center;
+}
+
+.message{
+    display: flex;
+    justify-content: center;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+}
+.messagearea h2{
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    margin-top: 0;
+    text-align: center;
+    margin-bottom: 2em;
+    color: whitesmoke;
+}
+
+.messagearea input[type=text]{
+    width: 80%;
+    margin-bottom: 2em;
+    vertical-align: top;
+    border: 0;
+    padding-bottom: 1em;
+    border-bottom: 2px solid white;
+    background-color: #22223b;
+    color: white;
+    font-size: 1rem;
+    /* text-align: center; */
+}
+
+input[type=text]:focus{
+    outline: none;
+}
+
+textarea{
+    width: 80%;
+    height: 150px;
+    margin-bottom: 1em;
+    resize: none;
+    border: 0;
+    border-bottom: 2px solid white;
+    background-color: #22223b;
+    font-size: 1rem;
+    color: white;
+}
+
+textarea:focus{
+    outline: none;
+}
+
+input[type=submit]{
+    padding: 0.7em 0.5em;
+    background-color: #ff0000;
+    color: white;
+    border: 0;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.social{
+    width: 48%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.socialwrapper{
+    width: 100%;
+}
+
+.socialicons{
+    display: flex;
+    justify-content: center;
+}
+
+.socialicons li{
+    list-style: none;
+    font-size: 2rem;
+    margin-left: 1em;
+    color: white;
+}
+
+.socialicons ul{
+    display: flex;
+    padding: 0;
+}
+
+.mentions{
+    color: #7676a1bd;
+    display: flex;
+    justify-content: center;
+}
+
+.mentions p{
+    padding: 0;
+    margin: 0.4em;
+    text-transform: capitalize;
+    font-size: 0.8rem;
+}
+
 
 /* --------media-queries--------- */
 
@@ -333,6 +463,7 @@ h4{
         margin-bottom: 2em;
     }
 
+
 }
 
 @media(max-width: 600px){
@@ -349,6 +480,22 @@ h4{
     }
 }
 
+/* --------footer--------- */
+
+@media(max-width: 1000px){
+    .foot{
+        flex-direction: column;
+    }
+
+    .social,.messagearea{
+        width: 100%;
+    }
+
+    .messagearea{
+        margin-bottom: 2em;
+    }
+}
+
 
 /* ------hover area------- */
 
@@ -362,4 +509,24 @@ h4{
 
 .buy-this p:hover{
     font-weight: bold;
+}
+
+.fa-instagram:hover{
+    color: rgb(218, 31, 218);
+}
+
+.fa-facebook:hover{
+    color: rgb(0, 102, 255);
+}
+
+.fa-twitter-square:hover{
+    color: rgb(0, 166, 231);
+}
+
+.fa-pinterest:hover{
+    color: rgb(241, 65, 65);
+}
+
+input[type=submit]:hover{
+    filter: contrast(90%);
 }
