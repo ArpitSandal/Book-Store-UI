@@ -319,6 +319,7 @@ textarea{
     background-color: #22223b;
     font-size: 1rem;
     color: white;
+    font-family: 'Roboto', sans-serif;
 }
 
 textarea:focus{
