@@ -107,6 +107,10 @@ img{
     justify-content: flex-end;
 }
 
+#notshow{
+    display: none;
+}
+
 
 @media(max-width: 768px){
     .container{
@@ -140,6 +144,14 @@ img{
     .insidebox33 .temp2{
         align-items: flex-end;
         justify-content: flex-end;
+    }
+
+    #show{
+        display: none;
+    }
+
+    #notshow{
+        display: block;
     }
 
 }
